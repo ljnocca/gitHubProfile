@@ -15,8 +15,8 @@ function profiletoHTML (profileObj){
 	profileObjToHTML += '<p class = "bio">' + profileObj.bio + '</p>'
 	profileObjToHTML += '<ul class = "contactInfo">'
 	profileObjToHTML += 	'<li class = "location">' + profileObj.location + '</li>'
-	profileObjToHTML += 	'<li class = "email">' + profileObj.email + '</li>'
-	profileObjToHTML += 	'<li class = "website"><a href="' + profileObj.blog + '">www.ljnocca.com</a></li>'
+	profileObjToHTML += 	'<li class = "email"><a href="mailto:' + profileObj.email + '">'+ profileObj.email +'</a></li>'
+	profileObjToHTML += 	'<li class = "website"><a href="' + profileObj.blog + '">' + profileObj.blog + '</a></li>'
 	profileObjToHTML += '</ul>'
 
 	profileNode.innerHTML = profileObjToHTML

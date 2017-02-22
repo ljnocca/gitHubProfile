@@ -1,5 +1,12 @@
 /*MAIN STYLING*/
 
+#navBar{
+	height: 55px;
+	width: 100vw;
+	margin: none;
+	background: black;
+}
+
 #outter {
     display: flex;
     margin: 20px;
@@ -44,8 +51,9 @@ img{
 
 .contactInfo{
 	list-style: none;
-
 }
+
+
 
 
 
@@ -57,4 +65,5 @@ img{
 
 .repoName {
 	color: #4078c0;
+	font-size: 20px;
 }
