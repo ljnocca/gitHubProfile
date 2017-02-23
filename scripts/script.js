@@ -1,7 +1,6 @@
 //*** SECTION: PROFILE ***
 
-function profiletoHTML (profileObj){
-//this function assigns html to the API information from GitHub	
+function profiletoHTML (profileObj){ //this function assigns html to the API information from a GitHub profile	
 	var profileNode = document.querySelector('.profile')
 	var profileObjToHTML = ''
 	profileObjToHTML += '<img src="' + profileObj.avatar_url + '">'
@@ -18,7 +17,7 @@ function profiletoHTML (profileObj){
 
 //*** SECTION: REPOS ***
 
-function repoToHTMLstring (singleRepoObject){
+function repoToHTMLstring (singleRepoObject){ //this function assigns html to the API information from a GitHub repos	
 	var objectToHTML = ''
 	objectToHTML += '<ul class = "repoList">'
 	objectToHTML +=		'<li>'
@@ -53,7 +52,7 @@ loadDefaultProfile() //automatically display the default profile
 
 var baseURL = 'https://api.github.com/users/'
 
-function searchQuery (username){
+function searchQuery (username){ //updates baseURL to input for the getJSON API reques and the '.then' method
 	var profilePromise = $.getJSON(baseURL+username)
 	profilePromise.then(profiletoHTML)
 
@@ -62,9 +61,9 @@ function searchQuery (username){
 }
 
 
-var inputSearch = document.querySelector('.searchBar')
+var inputSearch = document.querySelector('.searchBar') //select the searchbar from the DOM
 
-inputSearch.addEventListener('keydown', function(eventObj) {
+inputSearch.addEventListener('keydown', function(eventObj) { //run search query once username is entered in the searchbar and enter key is pressed
     if (eventObj.keyCode === 13) {
         searchQuery(eventObj.target.value)
     }
